@@ -10,7 +10,9 @@
 
 # production
 /build
-
+Search.jsx
+package-lock.json
+yarn.lock
 # misc
 .DS_Store
 .env.local
