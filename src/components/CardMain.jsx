@@ -116,6 +116,7 @@ const CardMain = ({
     display: flex;
     align-items: center;
     margin: 1.5rem 0 0 0;
+    overflow: hidden;
   `;
   const Date = styled.p`
     margin: 0 0 0 10px;
