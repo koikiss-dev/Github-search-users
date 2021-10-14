@@ -110,6 +110,7 @@ const CardMain = ({
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-row-gap: 15px;
+      place-items: center;
     }
   `;
   const ContainerData = styled.div`
