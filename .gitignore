@@ -10,7 +10,6 @@
 
 # production
 /build
-Search.jsx
 
 # misc
 .DS_Store
