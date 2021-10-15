@@ -6,13 +6,10 @@ const Search = ({handle}) => {
   
   const Container = styled.div`
   display: flex;
-  justify-content: space-between;
   background: var(--bg-target);
   border-radius: 10px;
   margin: 2rem auto;
   padding: 6px;
-  align-items: center;
-  
   @media(min-width: 1000px){
     width: 55%;
     
