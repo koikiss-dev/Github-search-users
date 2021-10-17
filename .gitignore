@@ -8,7 +8,7 @@
 # testing
 /coverage
 #docs
-/api
+apiConfig.js
 # production
 /build
 
