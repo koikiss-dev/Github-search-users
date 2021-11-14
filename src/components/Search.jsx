@@ -2,40 +2,41 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from 'prop-types'
 
-const Search = ({handle}) => {
+//styled//
+const Container = styled.div`
+display: flex;
+background: var(--bg-target);
+border-radius: 10px;
+margin: 2rem auto;
+padding: 6px;
+@media(min-width: 1000px){
+  width: 55%;
   
-  const Container = styled.div`
-  display: flex;
-  background: var(--bg-target);
-  border-radius: 10px;
-  margin: 2rem auto;
-  padding: 6px;
-  @media(min-width: 1000px){
-    width: 55%;
-    
-  }
+}
 `;
 const Input = styled.input`
-  border: none;
-  width: 100%;
-  background: none;
-  outline: none;
-  color: #ffff;
-  font-size: 15px;
-  padding: 10px 0;
-  &::placeholder {
-    color: var(--font-nrmal);
-  }
+border: none;
+width: 100%;
+background: none;
+outline: none;
+color: #ffff;
+font-size: 15px;
+padding: 10px 0;
+&::placeholder {
+  color: var(--font-nrmal);
+}
 `;
 const Button = styled.button`
-  border: none;
-  display: flex;
-  align-items: center;
-  color: #ffff;
-  background-color: var(--color-primary);
-  padding: 7px 2rem;
-  border-radius: 7px;
+border: none;
+display: flex;
+align-items: center;
+color: #ffff;
+background-color: var(--color-primary);
+padding: 7px 2rem;
+border-radius: 7px;
 `;
+const Search = ({handle}) => {
+  
   return (
     <>
       <Container>

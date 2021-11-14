@@ -1,6 +1,120 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
+//styled//
+const UserContainer = styled.section`
+  background-color: var(--bg-target);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+  @media (min-width: 1000px) {
+    width: 50%;
+  }
+`;
+
+const UserMain = styled.div`
+  display: flex;
+  align-items: center;
+  color: #ffff;
+
+  @media (min-width: 1000px) {
+    justify-content: center;
+    flex-flow: column;
+  }
+`;
+const AvatarUser = styled.img`
+  border-radius: 100%;
+  max-width: 9rem;
+  margin: 0 15px 0 0;
+  @media (min-width: 1000px) {
+    margin: 0;
+    max-width: 18rem;
+  }
+`;
+const DataContainerName = styled.div`
+  line-height: 25px;
+  @media (min-width: 1000px) {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin: 2rem 0 0 0;
+  }
+`;
+const DataUser = styled.div`
+  @media (min-width: 1000px) {
+    text-align: center;
+  }
+`;
+const Name = styled.h2`
+  font-size: 18px;
+  @media (min-width: 1000px) {
+    font-size: 25px;
+  }
+`;
+const UserName = styled.p`
+  color: var(--color-primary);
+  font-size: 15px;
+  @media (min-width: 1000px) {
+    font-size: 18px;
+  }
+`;
+const JoinedData = styled.span`
+  font-size: 15px;
+`;
+//bio
+const Description = styled.p`
+  line-height: 27px;
+  margin: 2.5rem 0;
+`;
+//down
+const ContainerInfoNumber = styled.div`
+  background: var(--bg-data);
+  border-radius: 10px;
+  display: flex;
+  padding: 1.5rem 2.5rem;
+  justify-content: space-between;
+`;
+const Repos = styled.div`
+  text-align: center;
+  font-size: 13px;
+`;
+const Followers = styled(Repos)``;
+const Following = styled(Repos)`
+  margin: 0;
+`;
+const Title = styled.p`
+  color: var(--font-nrmal);
+`;
+const Data = styled.p`
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 0 0 0;
+`;
+//otherData
+const ContainerOtherData = styled.div`
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 15px;
+    place-items: center;
+  }
+`;
+const ContainerData = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0 0 0;
+  overflow: hidden;
+`;
+const Date = styled.p`
+  margin: 0 0 0 10px;
+`;
+const Link = styled.a`
+  text-decoration: none;
+  color: #ffff;
+  margin: 0 0 0 10px;
+`;
 const CardMain = ({
   avatar,
   name,
@@ -15,118 +129,6 @@ const CardMain = ({
   twitter,
   jobLocation,
 }) => {
-  const UserContainer = styled.section`
-    background-color: var(--bg-target);
-    padding: 20px;
-    border-radius: 15px;
-    margin: 0 auto;
-    @media (min-width: 1000px) {
-      width: 50%;
-    }
-  `;
-
-  const UserMain = styled.div`
-    display: flex;
-    align-items: center;
-    color: #ffff;
-
-    @media (min-width: 1000px) {
-      justify-content: center;
-      flex-flow: column;
-    }
-  `;
-  const AvatarUser = styled.img`
-    border-radius: 100%;
-    max-width: 9rem;
-    margin: 0 15px 0 0;
-    @media (min-width: 1000px) {
-      margin: 0;
-      max-width: 18rem;
-    }
-  `;
-  const DataContainerName = styled.div`
-    line-height: 25px;
-    @media (min-width: 1000px) {
-      display: flex;
-      align-items: center;
-      flex-flow: column;
-      margin: 2rem 0 0 0;
-    }
-  `;
-  const DataUser = styled.div`
-    @media (min-width: 1000px) {
-      text-align: center;
-    }
-  `;
-  const Name = styled.h2`
-    font-size: 18px;
-    @media (min-width: 1000px) {
-      font-size: 25px;
-    }
-  `;
-  const UserName = styled.p`
-    color: var(--color-primary);
-    font-size: 15px;
-    @media (min-width: 1000px) {
-      font-size: 18px;
-    }
-  `;
-  const JoinedData = styled.span`
-    font-size: 15px;
-  `;
-  //bio
-  const Description = styled.p`
-    line-height: 27px;
-    margin: 2.5rem 0;
-  `;
-  //down
-  const ContainerInfoNumber = styled.div`
-    background: var(--bg-data);
-    border-radius: 10px;
-    display: flex;
-    padding: 1.5rem 2.5rem;
-    justify-content: space-between;
-  `;
-  const Repos = styled.div`
-    text-align: center;
-    font-size: 13px;
-  `;
-  const Followers = styled(Repos)``;
-  const Following = styled(Repos)`
-    margin: 0;
-  `;
-  const Title = styled.p`
-    color: var(--font-nrmal);
-  `;
-  const Data = styled.p`
-    font-weight: 400;
-    font-size: 16px;
-    margin: 10px 0 0 0;
-  `;
-  //otherData
-  const ContainerOtherData = styled.div`
-    @media (min-width: 1000px) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-row-gap: 15px;
-      place-items: center;
-    }
-  `;
-  const ContainerData = styled.div`
-    display: flex;
-    align-items: center;
-    margin: 1.5rem 0 0 0;
-    overflow: hidden;
-  `;
-  const Date = styled.p`
-    margin: 0 0 0 10px;
-  `;
-  const Link = styled.a`
-    text-decoration: none;
-    color: #ffff;
-    margin: 0 0 0 10px;
-  `;
 
   return (
     <>
