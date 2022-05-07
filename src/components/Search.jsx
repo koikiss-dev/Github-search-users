@@ -45,16 +45,13 @@ const Search = ({handle}) => {
           type="text"
           placeholder="Search GitHub username..."
         />
-        <Button type="submit">
-          <box-icon name="search" color="#ffff"></box-icon>
-        </Button>
       </Container>
     </>
   );
 }
 
 Search.propTypes = {
-  handle: PropTypes.func, //recuerda que puedes exportar lo que sea desde aqui y darle un valor despues en otro archivo uwu
+  handle: PropTypes.func, 
 }
 
 export default Search

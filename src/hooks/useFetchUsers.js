@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import githubApi from "../api/apiConfig";
 import useLocalStorage from 'use-local-storage'
 export const useFetchUsers = () => {
-  const [value, setValue] = useLocalStorage("user", "fidalgodev");
+  const [value, setValue] = useLocalStorage("user", "jorgedevj");
   const [user, setUser] = useLocalStorage("items", []);
   const [loading, setLoading] = useState(false);
   const handle = (e) => {
